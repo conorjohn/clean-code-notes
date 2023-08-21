@@ -1,0 +1,18 @@
+# Chapter 4: Comments
+- Explain yourself in code
+  - Rather than spend your time writing the comments that explain the mess you’ve made, spend it cleaning that mess.
+- Give up mandated comments
+  - It is just plain silly to have a rule that says that every function and variable must have a comment. Comments like this just clutter up the code.
+- Avoid closing brace comments
+  - If you find yourself wanting to mark your closing braces, try to shorten your functions instead.
+  - e.g. // end of for, or // end of while
+- Avoid Water is Wet/redundant comments
+  - If you are only restating the obvious, the comment isn't needed and you've successfully expressed yourself via code.
+- Do not mandate comments to describe methods.
+- Avoid position markers
+  - There are rare times when they make sense, but in general they are clutter that should be eliminated.
+- Don't give too much information
+  - Don’t put interesting historical discussions or irrelevant descriptions of details into your comments. That is wat Git/Version control is for.
+- Don’t offer systemwide information
+  - If you must write a comment, then make sure it describes the code it appears near. Keep it local to where the comment is.
+- Avoid attribution and Journal Comments

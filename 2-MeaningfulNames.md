@@ -1,0 +1,53 @@
+# Chapter 2: Meaningful Names
+
+What to consider when attempting to name Classes, Variables, Constants etc. Naming things in programming can take a surprisingly long time to get one name right.
+
+- Use intention-revealing names
+  - Not a generic `let list;`
+  - But a specific `let customers = [];`
+- Avoid disinformation
+  - Don't refer to a grouping of accounts as an AccountList unless it is actually of type List, e.g. use `let accounts;` over `let accountList;`. The plural should infer some sort of collection of types.
+- Make Meaningful Distinctions
+  - If you are declaring a number of similar classes such as Product, ProductInfo, or ProductData, how is the next person supposed to know which to use. A moment to pause on these classes and attempt to rename them would be a good use of time.
+- Avoid similar shapes, as impatience on reading the following could lead to more time searching for a bug
+  - class ControllerForEfficientHandlingOfStrings
+  - class ControllerForEfficientStorageOfStrings
+- Use pronounceable names
+  - Leave the vowels in, there is no need to type DtaRcrd in place of DataRecord. It helps when actually discussing the classes and properties.
+- Use Searchable names
+    - Calling a variable, x, num, y and so on makes it very difficult to find when searching through your code by instance. And avoiding these names in .reduce, .sort and so on helps the next person understand what is happening inside the method.
+- Add context by using prefixes
+  - If something is to be called something as generic as `let state;`, do the next developer a favour and try adding more context, such as `let addressState;` or `let gameState;`. See how differently the word State can be used?
+- Interfaces & Implementations
+  - We shouldn't need to tell the user or consumer that they are receiving an interface over a class, so an I as a prefix soon becomes clutter
+- Avoid Mental Mapping
+  - Readers shouldn't have to translate what refers to what when reading your code. Using x, y, j as parameters in a method that is not a traditional loop results in a larger mental load for the reader. Avoid putting too much effort into appearing smart and more effort into describing what you are doing for the next developer.
+- Avoid Encodings
+- Adjust the length of a name to the size of its scope
+  - Is it obvious outside the class body that WD is an acronym for work days per week?
+  - `const WD;`
+  - `const WORK_DAYS_PER_WEEK;`
+- Avoid using the same name for different purposes
+  - `function add(value)` can be too generic when you'll need other similar functions in time that can't use that same name, instead try:
+    - `function concatenate(value)`
+    - `function insert(value)`
+    - `function append(value)`
+- Use Solution Domain Names
+  - If you have a paradigm that you can name the Class, method etc after, that will help your team to continue inside that pattern when they expand on your initial work.
+    - Observer
+    - Visitor
+    - Singleton
+- Use problem domain names
+  - When there is no programmer-eese for what you're doing, use the name from the problem domain. What does the term "document" mean in the archives domain? Are photos considered documents? Record would be better suited there.Try to name it in relation to the area of the product it is used in/ problem it is fixing.
+- Methods should have verb names
+- Booleans should refer to the truth of a statement, refering to the negative only serves to add to mental mapping:
+  - isDefined
+  - isCustomer
+  - isProducer
+- Classes
+  - Should have noun names, e.g. Customer, Account, Movie
+  - Should not have verb names, e.g. Manage, Process
+- Don't Be Cute
+  - Silly names like eatMyShorts() shouldn't be committed to the repo, because they won't make sense to newly on-boarded folk or people that weren't there when it was written.
+- Don't Pun
+  - Punning with class and variable names will only lead to confusion with others, maybe tell the joke in person instead.
